@@ -185,7 +185,7 @@ const LiveConsultant: React.FC<LiveConsultantProps> = ({ onClose, context }) => 
     if (sourceRef.current) {
       sourceRef.current.disconnect();
     }
-    if (audioContextRef.current) {
+    if (audioContextRef.current && audioContextRef.current.state !== 'closed') {
       audioContextRef.current.close();
     }
     setIsRecording(false);

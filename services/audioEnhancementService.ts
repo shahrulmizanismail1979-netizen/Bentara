@@ -88,7 +88,9 @@ export const enhanceAudio = async (audioBlob: Blob): Promise<Blob> => {
     console.error("Audio enhancement failed:", error);
     return audioBlob; // Fallback to original
   } finally {
-    await audioContext.close();
+    if (audioContext.state !== 'closed') {
+      await audioContext.close();
+    }
   }
 };
 
