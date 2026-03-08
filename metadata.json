@@ -1,0 +1,7 @@
+{
+  "name": "Bentara: Bilingual Meeting Assistant",
+  "description": "Advanced bilingual transcription and meeting summarizer specialized for Malaysian professional, academic, and legal contexts with DBP-compliant accuracy.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
